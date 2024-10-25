@@ -19,7 +19,7 @@ internal class UploadFiles: PageTest
         // Add event listner for the dialog box
         Page.Dialog += async (_, dialog) =>
         {
-            await Page.PauseAsync();
+            //await Page.PauseAsync();
             await dialog.AcceptAsync();
         };
 

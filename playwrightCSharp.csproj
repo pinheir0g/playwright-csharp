@@ -22,4 +22,8 @@
     <Using Include="NUnit.Framework" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include=".github\workflows\ci-playwrights.yml" />
+  </ItemGroup>
+
 </Project>
