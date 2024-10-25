@@ -14,7 +14,7 @@ internal class UploadFiles: PageTest
     public async Task UploadFilesExample()
     {
         await Page.GotoAsync("https://commitquality.com/practice-file-upload");
-        await Page.Locator("input[type=\"file\"]").SetInputFilesAsync("D:\\dev\\playwrightCSharp\\Example.runsettings");
+        await Page.Locator("input[type=\"file\"]").SetInputFilesAsync("./../../../README.md");
 
         // Add event listner for the dialog box
         Page.Dialog += async (_, dialog) =>
