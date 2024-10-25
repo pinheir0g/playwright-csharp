@@ -11,12 +11,7 @@ public class ExampleTest : PageTest
     [Test]
     public async Task HasTitle()
     {
-        var baseUrl = TestContext.Parameters["baseUrl"];
-
-        _ = await Page.GotoAsync(baseUrl);
-
-        var envVariable = Environment.GetEnvironmentVariable("SUBSCRIBE");
-        var testParam = TestContext.Parameters["Playwright"];
+        await Page.GotoAsync("https://playwright.dev");
 
         // Expect a title "to contain" a substring.
         await Expect(Page).ToHaveTitleAsync(new Regex("Playwright"));
