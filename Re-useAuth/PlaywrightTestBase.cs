@@ -12,7 +12,7 @@ namespace playwrightCSharp.Re_useAuth
         public async Task Setup()
         {
             var playwright = await Playwright.CreateAsync();
-            Browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions { Headless = false });
+            Browser = await playwright.Chromium.LaunchAsync();
 
             var context = await Browser.NewContextAsync(new()
             {

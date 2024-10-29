@@ -18,7 +18,7 @@ namespace playwrightCSharp.Re_useAuth
         public async Task Login()
         {
             Pw = await Playwright.CreateAsync();
-            Browser = await Pw.Chromium.LaunchAsync(new BrowserTypeLaunchOptions { Headless = false });
+            Browser = await Pw.Chromium.LaunchAsync();
             var context = await Browser.NewContextAsync();
             var page = await context.NewPageAsync();
 
